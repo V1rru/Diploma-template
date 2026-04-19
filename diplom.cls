@@ -12,7 +12,7 @@
 \ProvidesClass{diplom}[2025/01/02 Modern diploma class for XeLaTeX/LuaLaTeX]
 
 % Загружаем базовый класс report с переданными опциями
-\LoadClassWithOptions{report}
+\LoadClassWithOptions{extreport}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Подключаем основные пакеты
@@ -54,7 +54,7 @@
 \geometry{
   a4paper,
   left=3cm,
-  right=2cm,
+  right=1.5cm,
   top=2cm,
   bottom=2cm,
   bindingoffset=0cm
@@ -245,14 +245,11 @@
 %% Значения по умолчанию для титульной страницы
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\LetterHead{Министерство науки и высшего образования Российской Федерации\\
-  Федеральное государственное бюджетное образовательное\\
-  учреждение высшего образования\\
-  <<Ярославский государственный университет имени П.\,Г.~Демидова>>}
-\Kafedra{Кафедра теоретической информатики}
-\Napr{Направление 02.03.02 Фундаментальная информатика и информационные технологии\\Профиль <<Компьютерные науки>>}
+\LetterHead{\bfseries ВУЗ}
+\Kafedra{Кафедра}
+\Napr{Направление}
 \ZavKaf{Заведующий кафедрой,\\ д.\,ф.-м.\,н., профессор}{С.\,С.~Сидоров}
-\DocumentType{\large Выпускная квалификационная работа бакалавра}
+\DocumentType{\large Выпускная квалификационная работа}
 \Title{\Large\bfseries Название дипломной работы}
 \Chief{Научный руководитель\\ к.\,ф.-м.\,н., доцент}{П.\,П.~Петров}
 \Author{Студент группы ИТ-41БО}{И.\,И.~Иванов}
@@ -267,19 +264,17 @@
 \setlength{\VisaWidth}{6cm}
 \newcommand*{\SignDate}{\\[3pt]<<\rule{1cm}{0.5pt}>>\hrulefill\ \@Year~г.}
 \newcommand*{\SignBlock}[1]{%
-   \vspace{0.5\baselineskip}
    \hbox to \textwidth{%
    \hfill%
    \begin{minipage}[t]{\VisaWidth}
-     \begin{flushleft}
+     \begin{flushright}
        #1
-     \end{flushleft}
+     \end{flushright}
    \end{minipage}%
    }%
-   \vspace{1.1\baselineskip}
 }
 \newcommand*{\StandardSign}[2]{%
-    \SignBlock{#1\\[\baselineskip]
+    \SignBlock{#1\\
 	\hrulefill\ #2
 	\SignDate}
 }
@@ -293,24 +288,25 @@
 	\hypersetup{pdftitle=\@Title, pdfauthor=\@AuthorName}
 	\begin{center}
 	  {\@LetterHead}\\[0.5\baselineskip]
-	  {\@Kafedra}\\
-	  {\@Napr}\\[1cm]
+	  {\@Kafedra}\\[0.5\baselineskip]
 	\end{center}
-	\ifkursovaya
-		\vfill
-	\else
+	\vspace{0.5\baselineskip}
+    \noindent\hfill
 		\SignBlock{Сдано на кафедру \SignDate\\
-			\@ZavStatus\\[\baselineskip]
-			\hrulefill\ \@ZavName}
-	\fi
+		\@ZavStatus\\
+		\hrulefill\ \@ZavName}
+	\vspace{1.1\baselineskip}
 	\begin{center}
 	    {\@DocumentType\\[1\baselineskip]}
-		{\Large\bfseries \@Title\\[2\baselineskip]}
+		{\bfseries \@Title\\[1\baselineskip]}
+  		{\@Napr}\\
 	\end{center}
+	\vspace{0.5\baselineskip}
 	\StandardSign{\@ChiefStatus}{\@ChiefName}
+	\vspace{2.5\baselineskip}
 	\StandardSign{\@AuthorStatus}{\@AuthorName}
 	\vfill\strut
-	\centerline{\@City, \@Year}
+	\centerline{\@City\ \@Year\ г.}
 \end{titlepage}
 \setcounter{page}{2}
 }
