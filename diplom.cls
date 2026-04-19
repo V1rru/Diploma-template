@@ -222,16 +222,6 @@
   }
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Настройка стиля ненумерованных заголовков
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-\titleformat{name=\chapter}[display]
-{\normalfont\bfseries\centering}
-{}
-{0pt}
-{\bfseries\centering\fontsize{16pt}{18pt}\selectfont}
-\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{0.5em}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Команды для заполнения титульной страницы
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -384,6 +374,30 @@
   \chapter*{#1}%
   \addcontentsline{toc}{chapter}{#1}%
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Настройка стиля ненумерованных глав
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{name=\chapter,numberless}[display]
+{\normalfont\bfseries\centering}
+{}
+{0pt}
+{\bfseries\centering\fontsize{16pt}{18pt}\selectfont}
+\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{0.5em}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Переопределение верхнего отступа для ненумерованных глав
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@makeschapterhead#1{%
+	{\parindent \z@ \centering
+		\normalfont
+		\bfseries
+		\fontsize{16pt}{18pt}\selectfont
+		#1\par\nobreak
+		\vskip 0.5em
+}}
+\makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Математические макросы
