@@ -222,6 +222,16 @@
   }
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Настройка стиля ненумерованных заголовков
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titleformat{name=\chapter}[display]
+{\normalfont\bfseries\centering}
+{}
+{0pt}
+{\bfseries\centering\fontsize{16pt}{18pt}\selectfont}
+\titlespacing*{name=\chapter,numberless}{0pt}{0pt}{0.5em}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Команды для заполнения титульной страницы
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
