@@ -210,12 +210,6 @@
   \inappendixtrue
   \oldappendix
   \renewcommand{\thechapter}{\Asbuk{chapter}}
-  \titleformat{\chapter}[display]
-    {\normalfont\Large\bfseries}
-    {\hfill\appendixname\ \thechapter}
-    {0pt}
-    {\normalfont\Large\bfseries\centering}
-  \titlespacing{\chapter}{0pt}{0pt}{3.5em}
   \let\addcontentslineold=\addcontentsline
   \renewcommand{\addcontentsline}[3]{%
     \addcontentslineold{##1}{##2}{\appendixname~##3}%
@@ -409,7 +403,13 @@
 		\bfseries
 		\fontsize{16pt}{18pt}\selectfont
 		\ifnum \c@secnumdepth >\m@ne
-		\thechapter.\ #1\par\nobreak
+			\ifinappendix
+        		{\raggedleft\normalfont\fontsize{16pt}{18pt}\selectfont \appendixname\ \thechapter\par}
+				\vskip 1\baselineskip
+				{\centering\normalfont\bfseries\normalsize #1\par}
+			\else
+				\thechapter.\ #1\par\nobreak
+			\fi
 		\else
 		#1\par\nobreak
 		\fi
