@@ -29,7 +29,7 @@
 \RequirePackage{amsmath,amssymb,mathtools}
 \RequirePackage{amsthm}
 \RequirePackage{totcount}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
 \RequirePackage{booktabs}
 \RequirePackage{graphicx}
 \RequirePackage{letltxmacro}
