@@ -75,10 +75,10 @@
 \titlespacing{\chapter}{0pt}{1em}{3.5em}
 
 \titleformat{\section}[hang]
-  {\normalfont\large\bfseries}
+  {\normalfont\normalsize\bfseries}
   {\thesection.\ }
   {0pt}
-  {\normalfont\large\bfseries}
+  {\normalfont\normalsize\bfseries}
 \titlespacing{\section}{0pt}{1em}{1em}
 
 \titleformat{\subsection}[hang]
