@@ -400,6 +400,24 @@
 \makeatother
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Переопределение верхнего отступа для нумерованных глав
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\def\@makechapterhead#1{%
+	{\parindent \z@
+		\normalfont
+		\bfseries
+		\fontsize{16pt}{18pt}\selectfont
+		\ifnum \c@secnumdepth >\m@ne
+		\thechapter.\quad #1\par\nobreak
+		\else
+		#1\par\nobreak
+		\fi
+		\vskip 1em
+}}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Математические макросы
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
