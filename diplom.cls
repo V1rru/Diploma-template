@@ -409,7 +409,7 @@
 		\bfseries
 		\fontsize{16pt}{18pt}\selectfont
 		\ifnum \c@secnumdepth >\m@ne
-		\thechapter.\quad #1\par\nobreak
+		\thechapter.\ #1\par\nobreak
 		\else
 		#1\par\nobreak
 		\fi
