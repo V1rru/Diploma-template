@@ -76,21 +76,21 @@
 
 \titleformat{\section}[hang]
   {\normalfont\normalsize\bfseries}
-  {\thesection.\ }
+  {\thesection\ }
   {0pt}
   {\normalfont\normalsize\bfseries}
 \titlespacing{\section}{0pt}{1em}{1em}
 
 \titleformat{\subsection}[hang]
   {\normalfont\normalsize\bfseries}
-  {\thesubsection.\ }
+  {\thesubsection\ }
   {0pt}
   {\normalfont\normalsize\bfseries}
 \titlespacing{\subsection}{0pt}{1em}{1em}
 
 \titleformat{\subsubsection}[hang]
   {\normalfont\normalsize\bfseries}
-  {\thesubsubsection.\ }
+  {\thesubsubsection\ }
   {0pt}
   {\normalfont\normalsize\bfseries}
 \titlespacing{\subsubsection}{0pt}{1em}{1em}
