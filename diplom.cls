@@ -317,7 +317,7 @@
   \total{tablenum}~табл., \getbibnum~источников, \total{appnum}~прил.%
   \par\medskip
   \noindent
-  Ключевые слова: \textbf{\@keywords}%
+  Ключевые слова: \textbf{\@keywords.}%
   \par\medskip
   \noindent
   \ignorespaces
