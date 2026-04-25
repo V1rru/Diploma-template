@@ -207,13 +207,13 @@
 
 \let\oldappendix=\appendix
 \renewcommand{\appendix}{%
-  \inappendixtrue
-  \oldappendix
-  \renewcommand{\thechapter}{\Asbuk{chapter}}
-  \let\addcontentslineold=\addcontentsline
-  \renewcommand{\addcontentsline}[3]{%
-    \addcontentslineold{##1}{##2}{\appendixname~##3}%
-  }
+	\inappendixtrue
+	\oldappendix
+	\renewcommand{\thechapter}{\Asbuk{chapter}}
+	\let\addcontentslineold=\addcontentsline
+	\renewcommand{\addcontentsline}[3]{%
+		\addcontentslineold{##1}{##2}{\appendixname~\thechapter}%
+	}%
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
