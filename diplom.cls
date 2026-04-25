@@ -111,7 +111,7 @@
   {\titlerule*[1pc]{.}\contentspage}
 \titlecontents{subsection}[3.8em]
   {}
-  {\thecontentslabel.\ }
+  {\thecontentslabel\ }
   {}
   {\titlerule*[1pc]{.}\contentspage}
 
