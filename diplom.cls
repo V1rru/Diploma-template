@@ -422,6 +422,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \counterwithout{equation}{chapter}
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
 \providecommand\given{}
 \newcommand\SetSymbol[1][]{%
   \nonscript\:#1\vert
