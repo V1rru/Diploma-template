@@ -60,7 +60,7 @@
   bindingoffset=0cm
 }
 
-\onehalfspacing
+\setstretch{1.5}
 \setlength{\parindent}{1.25cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -279,6 +279,7 @@
 
 \renewcommand*{\maketitle}{%
 \begin{titlepage}
+	\onehalfspacing
 	\hypersetup{pdftitle=\@Title, pdfauthor=\@AuthorName}
 	\begin{center}
 	  {\@LetterHead}\\[0.5\baselineskip]
@@ -422,8 +423,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \counterwithout{equation}{chapter}
-\counterwithout{figure}{chapter}
-\counterwithout{table}{chapter}
 \providecommand\given{}
 \newcommand\SetSymbol[1][]{%
   \nonscript\:#1\vert
