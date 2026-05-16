@@ -337,6 +337,33 @@
   \addcontentsline{toc}{chapter}{#1}%
 }
 
+\RequirePackage[
+backend=biber,
+style=gost-numeric,
+sorting=none
+]{biblatex}
+
+\RequirePackage{xurl}
+\RequirePackage{hyperref}
+
+\DeclareBibliographyDriver{online}{%
+	\urlstyle{same}
+	\usebibmacro{begentry}%
+	\printfield{title}%
+	\setunit{\addspace}%
+	\printtext{[Электронный ресурс]}%
+	\setunit{\addspace}%
+	\printtext{// URL: \url{\thefield{url}}}%
+	\setunit{\addspace}%
+	\printtext{(Дата обращения: %
+		\thefield{urlday}.%
+		\ifnumless{\thefield{urlmonth}}{10}{0}{}%
+		\thefield{urlmonth}.%
+		\thefield{urlyear})}%
+	\addperiod%
+	\usebibmacro{finentry}%
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Подсчёт количества использованных источников
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
