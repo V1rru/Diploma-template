@@ -122,7 +122,7 @@
 \DeclareCaptionLabelSeparator{emdash}{~---~}
 \captionsetup{
   justification=centering,
-  labelsep=emdash,
+  labelsep=space,
   labelfont=bf
 }
 \DeclareCaptionLabelFormat{rtable}{\hfill #1~#2}
