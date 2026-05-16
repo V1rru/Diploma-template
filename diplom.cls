@@ -374,10 +374,10 @@
 %% Настройка стиля ненумерованных глав
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \titleformat{name=\chapter,numberless}[display]
-{\normalfont\bfseries}
+{\normalfont\bfseries\centering}
 {}
 {0pt}
-{\bfseries\fontsize{16pt}{18pt}\selectfont}
+{\bfseries\centering\fontsize{16pt}{18pt}\selectfont}
 \titlespacing*{name=\chapter,numberless}{0pt}{0pt}{0.5em}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -385,7 +385,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \def\@makeschapterhead#1{%
-	{\parindent \z@
+	{\parindent \z@ \centering
 		\normalfont
 		\bfseries
 		\fontsize{16pt}{18pt}\selectfont
