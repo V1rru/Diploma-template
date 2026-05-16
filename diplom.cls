@@ -261,9 +261,9 @@
    \hbox to \textwidth{%
    \hfill%
    \begin{minipage}[t]{\VisaWidth}
-     \begin{flushright}
+     \begin{flushleft}
        #1
-     \end{flushright}
+     \end{flushleft}
    \end{minipage}%
    }%
 }
@@ -282,21 +282,21 @@
 	\onehalfspacing
 	\hypersetup{pdftitle=\@Title, pdfauthor=\@AuthorName}
 	\begin{center}
-	  {\@LetterHead}\\[0.5\baselineskip]
+	  {\@LetterHead}\\
 	  {\@Kafedra}\\[0.5\baselineskip]
 	\end{center}
-	\vspace{0.5\baselineskip}
+	\vspace{1\baselineskip}
     \noindent\hfill
 		\SignBlock{Сдано на кафедру \SignDate\\
 		\@ZavStatus\\
 		\hrulefill\ \@ZavName}
 	\vspace{1.1\baselineskip}
 	\begin{center}
-	    {\@DocumentType\\[1\baselineskip]}
-		{\bfseries \@Title\\[1\baselineskip]}
-  		{\@Napr}\\
+	    {\@DocumentType\\[0.25\baselineskip]}
+		{\bfseries \@Title\\[0.25\baselineskip]}
+  		{\@Napr}\\[1\baselineskip]
 	\end{center}
-	\vspace{0.5\baselineskip}
+	\vspace{1\baselineskip}
 	\StandardSign{\@ChiefStatus}{\@ChiefName}
 	\vspace{2.5\baselineskip}
 	\StandardSign{\@AuthorStatus}{\@AuthorName}
