@@ -119,20 +119,10 @@
 %% Подписи к рисункам и таблицам
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\DeclareCaptionLabelSeparator{emdash}{~---~}
 \captionsetup{
   justification=centering,
   labelsep=space,
   labelfont=bf
-}
-\DeclareCaptionLabelFormat{rtable}{\hfill #1~#2}
-\captionsetup[table]{
-  position=top,
-  labelformat=rtable,
-  labelsep=newline,
-  textfont=bf,
-  justification=centering,
-  singlelinecheck=false
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
